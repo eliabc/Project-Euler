@@ -1,0 +1,21 @@
+#--------------------------------------------------------------------------
+# a program to find the sum of all even fibonacci numbers starting with 1
+# whose values are less than 4 million
+# 2021 Benjamin Elia 
+#--------------------------------------------------------------------------
+
+num_a = 1
+num_b = 2
+num_total = 0
+
+while num_a < 4000000:
+    if (num_a % 2 == 0): #determines if number is even 
+        num_total = num_total + num_a
+        num_sum = num_a + num_b
+        num_a = num_b
+        num_b = num_sum
+    else:
+        num_sum = num_a + num_b
+        num_a = num_b
+        num_b = num_sum
+print(num_total)
